@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
-    protected $fillable = ['description','date_from','date_to','organizing_company_id','city', 'countr', 'event_url','topic'];
+    protected $fillable = ['description','date_from','date_to','city', 'country', 'event_url','topic'];
+}
+
+function company()
+{
+    return $this->belongsTo('App\Company');
 }

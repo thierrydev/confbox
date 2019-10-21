@@ -13,9 +13,9 @@ class CreateEventsTable extends Migration {
 			//$table->increments('id')->primary();
 			$table->date('date_from');
 			$table->date('date_to');
-			$table->integer('organizing_company_id')->unsigned();
-			$table->string('city', 255);
-			$table->string('country', 255);
+			$table->integer('organizing_company_id')->unsigned()->nullable();
+			$table->string('city', 255)->nullable();
+			$table->string('country', 255)->nullable();
 			$table->string('event_url', 255)->nullable();
 			$table->string('approval_status', 30)->default('not_approved');
 			$table->string('topic', 255)->nullable();
