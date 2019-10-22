@@ -1,6 +1,7 @@
 @section('results')
 @extends('index')
 @foreach ($events as $event)
+{{ csrf_field() }}
 <div class="row">
     <div class="col-xs-1-12">
         <div class="card">
@@ -22,5 +23,6 @@
         </div>
     </div>
 </div>
+@endforeach
 
 @endsection
