@@ -12,7 +12,18 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
 
-Route::resource ('event', 'EventController');
+Route::view('/events', 'EventController@index');
+
+Route::get('/all',function () {
+    return view('results');
+});
+
+// Route::get('/all,'results');
+
+Route::resource('event', 'EventController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

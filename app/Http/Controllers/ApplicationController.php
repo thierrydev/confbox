@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Application;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\View;
-use Illuminate\Database\Eloquent\ModelNotFoundException;
 
-use App\Models\Event;
-
-
-class EventController extends Controller
+class ApplicationController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,9 +14,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        $events = Event::all();
-        // $events = Event::all()->sortBy('date_from', 'asc')->get();
-        return view('results')->with('events',$events);
+        //
     }
 
     /**
@@ -47,10 +41,10 @@ class EventController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Application  $application
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Application $application)
     {
         //
     }
@@ -58,10 +52,10 @@ class EventController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Application  $application
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Application $application)
     {
         //
     }
@@ -70,10 +64,10 @@ class EventController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Application  $application
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Application $application)
     {
         //
     }
@@ -81,10 +75,10 @@ class EventController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Application  $application
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Application $application)
     {
         //
     }
