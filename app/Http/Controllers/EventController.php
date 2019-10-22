@@ -13,7 +13,7 @@ class EventController extends Controller
         return view('/event', ['events' => $event]);
     }
    
-    public function create()
+    public function  create()
     {
         $event = new Event();
         return view('Organizer/create', ['event' => $event]);
