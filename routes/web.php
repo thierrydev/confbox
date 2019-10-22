@@ -12,5 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('main');
 });
+
+Route::view('/events', 'EventController@index');
+
+Route::get('/all',function () {
+    return view('results');
+});
+
+// Route::get('/all,'results');
+
+Route::resource('events', 'EventController');
