@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ApplicationRejected extends Mailable
+class ApplicationRecieved extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -23,8 +23,8 @@ class ApplicationRejected extends Mailable
 
     public function build()
     {
-        return $this->view('userView.applicationRejectedView')
-                    ->subject('Event application cancelled')
+        return $this->view('userView.applicationRecievedView')
+                    ->subject('Event application recieved')
                     ->with([
                         'name' => $this->application->name,
                         'created_at' => $this->application->created_at->format('l jS \\of F Y h:i:s A')
