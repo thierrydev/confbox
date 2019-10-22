@@ -8,11 +8,11 @@ class CreateForeignKeys extends Migration {
 
 	public function up()
 	{
-		Schema::table('events', function(Blueprint $table) {
+		/* Schema::table('events', function(Blueprint $table) {
 			$table->foreign('organizing_company_id')->references('company_id')->on('companies')
 						->onDelete('no action')
 						->onUpdate('no action');
-		});
+		}); */
 		Schema::table('applications', function(Blueprint $table) {
 			$table->foreign('volunteer_id')->references('id')->on('Users')
 						->onDelete('no action')

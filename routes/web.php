@@ -23,4 +23,4 @@ Route::get('/all',function () {
 
 // Route::get('/all,'results');
 
-Route::resource('events', 'EventController');
+Route::resource('event', 'EventController');
