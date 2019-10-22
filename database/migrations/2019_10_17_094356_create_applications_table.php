@@ -9,8 +9,8 @@ class CreateApplicationsTable extends Migration {
 	{
 		Schema::create('applications', function(Blueprint $table) {
 			$table->engine = 'InnoDB';
-			$table->increments('id', true);
-			$table->bigInteger('volunteer_id')->unsigned();
+			$table->bigIncrements('id');
+			$table->unsignedBigInteger('volunteer_id');
 			$table->string('status', 55)->default('not_approved');
 			$table->integer('event_id')->unsigned();
 			$table->timestamps();
