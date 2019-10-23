@@ -28,7 +28,7 @@
                 <td>{{$event->topic}}</td>
                 <td>{{$event->event_url}}</td>
                 <td>
-                    <form method="GET" action="eventAdmin">
+                    <form method="GET" action="event.admin">
                         <input class="botonValidar" type="submit" value="Validar">
                     </form> 
                 </td>

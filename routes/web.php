@@ -29,4 +29,4 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 //Route::get('/event/{id}/edit', 'UserController@edit');
 
-Route::get('eventAdmin','EventController@validateEvent');
+Route::get('/validateEvent/{id}','EventController@validateEvent');
