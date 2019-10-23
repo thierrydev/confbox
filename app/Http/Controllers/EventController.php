@@ -22,13 +22,13 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::all();
-        return view('eventList', ['events' => $events]);
+        return view('Events/eventList', ['events' => $events]);
     }
    
     public function create()
     {
         $event = new Event();
-        return view('Organizer/create', ['event' => $event]);
+        return view('Events/create', ['event' => $event]);
     }
 
     public function store(Request $request)
@@ -59,5 +59,15 @@ class EventController extends Controller
     public function destroy(Event $event)
     {
         //
+    }
+
+    public function validateEvent (Event $event)
+    {
+        // $data = $request->all();
+        // dd($request);
+        $event = Event::find($event->id);
+        //$event->update($event->approval_status="approved");
+        
+        //return view('Admin/eventAdmin');
     }
 }
