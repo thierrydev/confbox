@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 
-use App\Models\Event;
+use App\Event;
 
 
 class EventController extends Controller

@@ -15,8 +15,8 @@ class CreateForeignKeys extends Migration {
 		});
 		Schema::table('applications', function(Blueprint $table) {
 			$table->foreign('volunteer_id')->references('id')->on('users')
-						->onDelete('no action')
-						->onUpdate('no action');
+						->onDelete('cascade')
+						->onUpdate('cascade');
 		});
 		Schema::table('applications', function(Blueprint $table) {
 			$table->foreign('event_id')->references('id')->on('events')

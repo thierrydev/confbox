@@ -12,18 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('main');
+    return view('welcome');
 });
 
-Route::view('/events', 'EventController@index');
 
-Route::get('/all',function () {
-    return view('results');
-});
 
-// Route::get('/all,'results');
+Route::resource('/event', 'EventController');
+Route::resource('/company', 'CompanyController');
+Route::resource('/application', 'ApplicationController');
 
-Route::resource('event', 'EventController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
