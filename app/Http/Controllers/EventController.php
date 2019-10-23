@@ -44,11 +44,16 @@ class EventController extends Controller
    
     public function edit(Event $event)
     {
-        //
+       return view('/Events/edit',['event' => $event]);
     }
+
     public function update(Request $request, Event $event)
     {
-        //
+        $data = $request->all();
+        $event = Event::find($event->id);
+        $event->fill($data);
+        $event->save();
+        return redirect('event');
     }
    
     public function destroy(Event $event)
