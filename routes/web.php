@@ -19,9 +19,9 @@ Route::get('/', function () {
 
 Route::resource('/event', 'EventController');
 Route::resource('/company', 'CompanyController');
-Route::resource('/application', 'ApplicationController');
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-//Route::get('/event/{id}/edit', 'UserController@edit');
+Route::resource('/application', 'ApplicationController')->middleware('auth');
+

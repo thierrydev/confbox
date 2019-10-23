@@ -24,6 +24,12 @@ class EventController extends Controller
         $events = Event::all();
         return view('eventList', ['events' => $events]);
     }
+
+    public function userIndex()
+    {
+        $events = Event::all()->where('volunteer_id', auth()->id());
+        return view('eventList', ['events' => $events]);
+    }
    
     public function create()
     {

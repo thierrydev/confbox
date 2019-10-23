@@ -2,8 +2,9 @@
 
 @section('content')
     
-<form action="/application" method="POST">
+<form action="/application/{{$application->id}}" method="POST">
     @csrf
+    @method('PUT')
     <label for="First name">First name
     <input type="text" placeholder="First name" name="firstname" value="{{$application->firstname}}">
     </label>
