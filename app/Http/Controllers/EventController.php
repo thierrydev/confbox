@@ -53,7 +53,7 @@ class EventController extends Controller
         $event = Event::find($event->id);
         $event->fill($data);
         $event->save();
-        return redirect('event');
+        return view('Events/successUpdate');
     }
    
     public function destroy(Event $event)
