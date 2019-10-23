@@ -15,10 +15,9 @@
 <body>
 
     <div class="container">
-        <main-section>
-
-            @yield('results')
-        </main-section>
+        <main>
+            @yield('content')
+        </main>
     </div>
 
     @include('include.footer');
