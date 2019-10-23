@@ -25,3 +25,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/application', 'ApplicationController')->middleware('auth');
 
+//Route::get('/event/{id}/edit', 'UserController@edit');
+
+Route::get('eventAdmin','EventController@validateEvent');

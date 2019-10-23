@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Events List</title>
+        <title>Event's List</title>
     </head>
     <body>
-    <h1>Events List</h1>
+    <h1>Event's List</h1>
     <div id="EventsBox">
         <table>
             <tr>
@@ -27,6 +27,11 @@
                 <td>{{$event->country}}</td>
                 <td>{{$event->topic}}</td>
                 <td>{{$event->event_url}}</td>
+                <td>
+                    <form method="GET" action="validateEvent">
+                        <input class="botonValidar" type="submit" value="Validar">
+                    </form> 
+                </td>
                 <td>
                     <form method="GET" action="event/{{$event->id}}/edit">
                         <input class="botonEditar" type="submit" value="Editar">
