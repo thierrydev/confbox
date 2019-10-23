@@ -15,7 +15,9 @@
                     @endif
 
                     You are logged in!
+                    
                 </div>
+                <a type="button" class="btn btn-primary" href="/application">See List of Applications</a>
             </div>
         </div>
     </div>
