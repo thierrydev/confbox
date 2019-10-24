@@ -9,7 +9,7 @@
 <body>
     <div>
         <h1 class="title">New Event</h1>
-        <h3 class="title">Fill the input fields</h3>
+        <h3 class="title">Please fill all the input fields below:</h3>
         @if ($errors->any())
             <p>Please fill all the input fields</p>
         @endif
@@ -36,9 +36,14 @@
             <label>Topic</label>
             <input class="inputFields" type="text" name="topic" value="{{$event->topic}}">
             <br>
+            <label>Title</label>
+            <input class="inputFields" type="text" name="topic" value="{{$event->title}}">
+            <br>
             <div class="button">
             <input class="button" type="submit" value="Submit">
-            <a href="/event" type="submit" class="button">List of Events</a>
+            <br>
+            <a href="/validatedEvents" class="boton">Validated Events</a>
+            <a href="/event" type="submit" class="button">All Events</a>
             </div>
         </form>
     </div>

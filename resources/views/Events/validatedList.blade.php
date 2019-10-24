@@ -4,10 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Validate Event's List</title>
+        <title>Validated Events</title>
     </head>
     <body>
-    <h1>Validate Event's List</h1>
+    <h1>Validated Events</h1>
+    <a href="/event" class="boton">All Events</a>
+    <br>
     <div id="EventsBox">
         <table>
             <tr>
@@ -17,6 +19,7 @@
                 <th>Country</th>
                 <th>Topic</th>
                 <th>Event URL</th>
+                <th>Status</th>
                 
             </tr>
             @foreach ($events as $event)
@@ -27,14 +30,10 @@
                 <td>{{$event->country}}</td>
                 <td>{{$event->topic}}</td>
                 <td>{{$event->event_url}}</td>
-                <td>
-                    <form method="GET" action="event.admin">
-                        <input class="botonValidar" type="submit" value="Validar">
-                    </form> 
-                </td>
+                <td>{{$event->approval_status}}</td>
                 <td>
                     <form method="GET" action="event/{{$event->id}}/edit">
-                        <input class="botonEditar" type="submit" value="Editar">
+                        <input class="botonEditar" type="submit" value="Edit">
                     </form> 
                 </td>
             </tr>
