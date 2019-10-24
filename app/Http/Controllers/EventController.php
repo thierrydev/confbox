@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Illuminate\Support\Facades\DB;
 
 use App\Event;
+
 
 
 class EventController extends Controller
@@ -22,7 +24,7 @@ class EventController extends Controller
     public function index()
     {
         $events = Event::all();
-        return view('Events/eventList', ['events' => $events]);
+        return view('Events/allEvents', ['events' => $events]);
     }
    
     public function create()
@@ -66,7 +68,14 @@ class EventController extends Controller
         $data = Event::find($id);
         $data->approval_status ="approved";
         $data->save();
-        return redirect('event');
-        //return view ('Events/validated',['event' => $event]);
+        //return redirect('event');
+        return view ('Events/validated',['event' => $event]);
     }
+
+    public function showValidatedEvents ()
+    {
+        $validatedEvents = DB::table('events')->where('approval_status', '=', 'approved')->get();
+        return view('Events/validatedList', ['events' => $validatedEvents]);
+    }
+
 }

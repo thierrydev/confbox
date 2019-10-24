@@ -12,7 +12,8 @@
     <h1>The Event has been successfully validated </h1>
     <h2>Event Title: {{$event->title}}</h2>
     <h2>Event status: {{$event->approval_status}}</h2>
-    <a href="/event" class="boton">Event's List</a>
+    <a href="/validatedEvents" class="boton">Validated Events</a>
+    <a href="/event" class="boton">All Events</a>
 </div>
 
 </body>

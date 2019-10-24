@@ -37,9 +37,11 @@
         <label>Event URL</label>
         <input class="campos" type="text" name="event_url" value="{{$event->event_url}}">
         <br>
-        <input type="submit" class="boton" value="Enviar y Confirmar">
+        <input type="submit" class="boton" value="Send">
         <br>
-        <a href="/event" class="boton">Events List</a>
+        <a href="/validatedEvents" class="boton">Validated Events</a>
+        <br>
+        <a href="/event" class="boton">All Events</a>
     </form>
 </div>
 

@@ -38,6 +38,8 @@
             <br>
             <div class="button">
             <input class="button" type="submit" value="Submit">
+            <br>
+            
             <a href="/event" type="submit" class="button">List of Events</a>
             </div>
         </form>

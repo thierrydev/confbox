@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Event's List</title>
+        <title>All Events</title>
     </head>
     <body>
-    <h1>Event's List</h1>
+    <h1>All Events</h1>
     <div id="EventsBox">
         <table>
             <tr>
