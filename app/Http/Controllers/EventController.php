@@ -63,12 +63,10 @@ class EventController extends Controller
         //
     }
 
-    public function validateEvent (Event $event, $id)
+    public function validateEvent (Event $event)
     {
-        $data = Event::find($id);
-        $data->approval_status ="approved";
-        $data->save();
-        //return redirect('event');
+        $event->approval_status ="approved";
+        $event->save();
         return view ('Events/validated',['event' => $event]);
     }
 

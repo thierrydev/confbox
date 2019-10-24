@@ -9,9 +9,14 @@
 <body>
 
 <div>
-    <h1>The Event has been successfully validated </h1>
-    <h2>Event Title: {{$event->title}}</h2>
-    <h2>Event status: {{$event->approval_status}}</h2>
+    <h1>Event successfully validated </h1>
+    <p>Id: {{$event->id}}</p>
+    <p>Status: {{$event->approval_status}}</p>
+    <p>Title: {{$event->title}}</p>
+    <p>Topic: {{$event->topic}}</p>
+    <p>URL: {{$event->event_url}}</p>
+    <p>City: {{$event->city}}</p>
+    <p>Country: {{$event->country}}</p>
     <a href="/validatedEvents" class="boton">Validated Events</a>
     <a href="/event" class="boton">All Events</a>
 </div>
