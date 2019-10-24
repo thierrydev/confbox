@@ -26,3 +26,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('/application', 'ApplicationController')->middleware('auth');
 
 Route::get('eventAdmin','EventController@validateEvent');
+Route::get('validateEvent/{event}','EventController@validateEvent');
+Route::get('validatedEvents','EventController@showValidatedEvents');
