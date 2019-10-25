@@ -41,11 +41,13 @@ class ApplicationController extends Controller
 
     public function update(Request $request, Application $application)
     {
-        //
+        $application->update($request->all());
+        return redirect('/application');
     }
 
     public function destroy(Application $application)
     {
-        //
+        $application->destroy($application->id);
+        return redirect('/application');
     }
 }
