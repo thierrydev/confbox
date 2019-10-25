@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
+Route::resource('/event', 'EventController');
+Route::resource('/company', 'CompanyController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/application', 'ApplicationController')->middleware('auth');
+
+Route::get('eventAdmin','EventController@validateEvent');
+Route::get('validateEvent/{event}','EventController@validateEvent');
+Route::get('validatedEvents','EventController@showValidatedEvents');
