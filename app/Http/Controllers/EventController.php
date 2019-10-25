@@ -13,14 +13,6 @@ use App\Event;
 
 class EventController extends Controller
 {
-    // public function index()
-    // {
-    //     $events = Event::all();
-    //     // $events = Event::all()->sortBy('date_from', 'asc')->get();
-    //     dd($events);
-    //     return view('results')->with('event',$events);
-    // }
-
     public function index()
     {
         $events = Event::all();

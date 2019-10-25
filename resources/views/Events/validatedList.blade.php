@@ -36,6 +36,12 @@
                         <input class="botonEditar" type="submit" value="Edit">
                     </form> 
                 </td>
+                <td>
+                    <form method="POST" action="event/{{$event->id}}/application">
+                        <input type="hidden" name="event_id" value="{{$evento->id}}">
+                        <input class="botonEditar" type="submit" value="Edit">
+                    </form> 
+                </td>
             </tr>
             @endforeach
         </table>
